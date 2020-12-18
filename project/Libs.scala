@@ -19,3 +19,10 @@ object Akka {
   val `akka-stream-testkit`      = "com.typesafe.akka" %% "akka-stream-testkit"      % Version
   val `akka-multi-node-testkit`  = "com.typesafe.akka" %% "akka-multi-node-testkit"  % Version
 }
+
+object AkkaHttp {
+  val Version             = "10.2.2"
+  val `akka-http-testkit` = "com.typesafe.akka" %% "akka-http-testkit" % Version //ApacheV2
+  val `akka-http`         = "com.typesafe.akka" %% "akka-http" % Version
+  val `spray-json`        = "com.typesafe.akka" %% "akka-http-spray-json" % Version
+}
