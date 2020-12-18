@@ -1,0 +1,660 @@
+{
+  "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations,customfield_12002.properties,customfield_12004.properties,customfield_12003.properties",
+  "id": "52536",
+  "self": "https://tmt-project.atlassian.net/rest/api/3/issue/52536",
+  "key": "DEOPSCSW-622",
+  "fields": {
+    "statuscategorychangedate": "2018-12-18T08:10:02.583-0800",
+    "customfield_12011": null,
+    "customfield_12013": null,
+    "fixVersions": [],
+    "customfield_12012": null,
+    "customfield_11200": null,
+    "customfield_11960": null,
+    "resolution": null,
+    "customfield_12014": null,
+    "customfield_11201": null,
+    "customfield_12017": {
+      "self": "https://tmt-project.atlassian.net/rest/api/3/customFieldOption/11437",
+      "value": "--",
+      "id": "11437"
+    },
+    "customfield_12016": {
+      "self": "https://tmt-project.atlassian.net/rest/api/3/customFieldOption/11431",
+      "value": "--",
+      "id": "11431"
+    },
+    "customfield_11961": null,
+    "customfield_12008": null,
+    "customfield_10500": {
+      "hasEpicLinkFieldDependency": false,
+      "showField": false,
+      "nonEditableReason": {
+        "reason": "PLUGIN_LICENSE_ERROR",
+        "message": "The Parent Link is only available to Jira Premium users."
+      }
+    },
+    "customfield_11952": null,
+    "customfield_12007": null,
+    "customfield_11955": null,
+    "customfield_12009": null,
+    "customfield_11957": null,
+    "customfield_10900": null,
+    "customfield_10901": null,
+    "customfield_11956": null,
+    "customfield_10902": null,
+    "customfield_11958": null,
+    "lastViewed": "2020-12-16T16:54:36.889-0800",
+    "customfield_12002": null,
+    "customfield_10100": [
+      {
+        "self": "https://tmt-project.atlassian.net/rest/api/3/customFieldOption/10100",
+        "value": "System Level",
+        "id": "10100"
+      }
+    ],
+    "customfield_12004": null,
+    "priority": {
+      "self": "https://tmt-project.atlassian.net/rest/api/3/priority/2",
+      "iconUrl": "https://tmt-project.atlassian.net/images/icons/priorities/high.svg",
+      "name": "High",
+      "id": "2"
+    },
+    "customfield_12003": null,
+    "customfield_10101": {
+      "self": "https://tmt-project.atlassian.net/rest/api/3/customFieldOption/10107",
+      "value": "No Particular Meeting",
+      "id": "10107"
+    },
+    "customfield_12006": null,
+    "customfield_11950": null,
+    "customfield_12005": null,
+    "labels": [],
+    "customfield_11700": null,
+    "customfield_11942": null,
+    "customfield_11941": null,
+    "customfield_10336": null,
+    "customfield_11944": null,
+    "customfield_11943": null,
+    "timeestimate": null,
+    "customfield_11946": null,
+    "aggregatetimeoriginalestimate": null,
+    "versions": [],
+    "customfield_11945": null,
+    "customfield_11948": null,
+    "customfield_11947": null,
+    "customfield_11949": null,
+    "issuelinks": [
+      {
+        "id": "41794",
+        "self": "https://tmt-project.atlassian.net/rest/api/3/issueLink/41794",
+        "type": {
+          "id": "10400",
+          "name": "Verify",
+          "inward": "is verified by",
+          "outward": "verifies",
+          "self": "https://tmt-project.atlassian.net/rest/api/3/issueLinkType/10400"
+        },
+        "outwardIssue": {
+          "id": "60070",
+          "key": "VER-875",
+          "self": "https://tmt-project.atlassian.net/rest/api/3/issue/60070",
+          "fields": {
+            "summary": "REQ-2-CSW-5755",
+            "status": {
+              "self": "https://tmt-project.atlassian.net/rest/api/3/status/10121",
+              "description": "The stories that are analyzed and have enough details, ACs, assumptions etc are in this status",
+              "iconUrl": "https://tmt-project.atlassian.net/images/icons/statuses/open.png",
+              "name": "To Do",
+              "id": "10121",
+              "statusCategory": {
+                "self": "https://tmt-project.atlassian.net/rest/api/3/statuscategory/2",
+                "id": 2,
+                "key": "new",
+                "colorName": "blue-gray",
+                "name": "To Do"
+              }
+            },
+            "priority": {
+              "self": "https://tmt-project.atlassian.net/rest/api/3/priority/4",
+              "iconUrl": "https://tmt-project.atlassian.net/images/icons/priorities/low.svg",
+              "name": "Low",
+              "id": "4"
+            },
+            "issuetype": {
+              "self": "https://tmt-project.atlassian.net/rest/api/3/issuetype/11115",
+              "id": "11115",
+              "description": "For DRD and ICD Verifications",
+              "iconUrl": "https://tmt-project.atlassian.net/secure/viewavatar?size=medium&avatarId=13733&avatarType=issuetype",
+              "name": "Verification Sub-task",
+              "subtask": true,
+              "avatarId": 13733
+            }
+          }
+        }
+      }
+    ],
+    "assignee": null,
+    "status": {
+      "self": "https://tmt-project.atlassian.net/rest/api/3/status/10122",
+      "description": "",
+      "iconUrl": "https://tmt-project.atlassian.net/images/icons/statuses/closed.png",
+      "name": "Done",
+      "id": "10122",
+      "statusCategory": {
+        "self": "https://tmt-project.atlassian.net/rest/api/3/statuscategory/3",
+        "id": 3,
+        "key": "done",
+        "colorName": "green",
+        "name": "Done"
+      }
+    },
+    "components": [
+      {
+        "self": "https://tmt-project.atlassian.net/rest/api/3/component/11420",
+        "id": "11420",
+        "name": "DBS"
+      }
+    ],
+    "customfield_11931": null,
+    "customfield_10600": "{}",
+    "customfield_11930": null,
+    "customfield_11933": null,
+    "customfield_11932": "test",
+    "aggregatetimeestimate": null,
+    "customfield_10328": null,
+    "customfield_11934": null,
+    "customfield_11937": null,
+    "customfield_11936": null,
+    "customfield_11938": null,
+    "creator": {
+      "self": "https://tmt-project.atlassian.net/rest/api/3/user?accountId=557058%3A9caecc68-1c7b-4eb8-af24-21dc185c8cb7",
+      "accountId": "557058:9caecc68-1c7b-4eb8-af24-21dc185c8cb7",
+      "avatarUrls": {
+        "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/557058:9caecc68-1c7b-4eb8-af24-21dc185c8cb7/93d1d5e0-5888-4b74-85b7-3b00181e2bf6/48",
+        "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/557058:9caecc68-1c7b-4eb8-af24-21dc185c8cb7/93d1d5e0-5888-4b74-85b7-3b00181e2bf6/24",
+        "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/557058:9caecc68-1c7b-4eb8-af24-21dc185c8cb7/93d1d5e0-5888-4b74-85b7-3b00181e2bf6/16",
+        "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/557058:9caecc68-1c7b-4eb8-af24-21dc185c8cb7/93d1d5e0-5888-4b74-85b7-3b00181e2bf6/32"
+      },
+      "displayName": "Chhaya Yadav",
+      "active": true,
+      "timeZone": "America/Los_Angeles",
+      "accountType": "atlassian"
+    },
+    "subtasks": [],
+    "reporter": {
+      "self": "https://tmt-project.atlassian.net/rest/api/3/user?accountId=557058%3A9caecc68-1c7b-4eb8-af24-21dc185c8cb7",
+      "accountId": "557058:9caecc68-1c7b-4eb8-af24-21dc185c8cb7",
+      "avatarUrls": {
+        "48x48": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/557058:9caecc68-1c7b-4eb8-af24-21dc185c8cb7/93d1d5e0-5888-4b74-85b7-3b00181e2bf6/48",
+        "24x24": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/557058:9caecc68-1c7b-4eb8-af24-21dc185c8cb7/93d1d5e0-5888-4b74-85b7-3b00181e2bf6/24",
+        "16x16": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/557058:9caecc68-1c7b-4eb8-af24-21dc185c8cb7/93d1d5e0-5888-4b74-85b7-3b00181e2bf6/16",
+        "32x32": "https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/557058:9caecc68-1c7b-4eb8-af24-21dc185c8cb7/93d1d5e0-5888-4b74-85b7-3b00181e2bf6/32"
+      },
+      "displayName": "Chhaya Yadav",
+      "active": true,
+      "timeZone": "America/Los_Angeles",
+      "accountType": "atlassian"
+    },
+    "aggregateprogress": {
+      "progress": 0,
+      "total": 0
+    },
+    "customfield_10200": null,
+    "customfield_10201": null,
+    "customfield_11920": null,
+    "customfield_11922": null,
+    "customfield_11800": null,
+    "customfield_11921": null,
+    "customfield_11924": null,
+    "customfield_11923": null,
+    "customfield_11925": null,
+    "customfield_11928": null,
+    "progress": {
+      "progress": 0,
+      "total": 0
+    },
+    "customfield_11927": null,
+    "votes": {
+      "self": "https://tmt-project.atlassian.net/rest/api/3/issue/DEOPSCSW-622/votes",
+      "votes": 0,
+      "hasVoted": false
+    },
+    "worklog": {
+      "startAt": 0,
+      "maxResults": 20,
+      "total": 0,
+      "worklogs": []
+    },
+    "customfield_11929": null,
+    "issuetype": {
+      "self": "https://tmt-project.atlassian.net/rest/api/3/issuetype/10200",
+      "id": "10200",
+      "description": "A user story. Created by JIRA Software - do not edit or delete.",
+      "iconUrl": "https://tmt-project.atlassian.net/images/icons/issuetypes/story.svg",
+      "name": "Story",
+      "subtask": false
+    },
+    "timespent": null,
+    "project": {
+      "self": "https://tmt-project.atlassian.net/rest/api/3/project/11203",
+      "id": "11203",
+      "key": "DEOPSCSW",
+      "name": "DEOPS-CSW",
+      "projectTypeKey": "software",
+      "simplified": false,
+      "avatarUrls": {
+        "48x48": "https://tmt-project.atlassian.net/secure/projectavatar?avatarId=10803",
+        "24x24": "https://tmt-project.atlassian.net/secure/projectavatar?size=small&s=small&avatarId=10803",
+        "16x16": "https://tmt-project.atlassian.net/secure/projectavatar?size=xsmall&s=xsmall&avatarId=10803",
+        "32x32": "https://tmt-project.atlassian.net/secure/projectavatar?size=medium&s=medium&avatarId=10803"
+      },
+      "projectCategory": {
+        "self": "https://tmt-project.atlassian.net/rest/api/3/projectCategory/10100",
+        "id": "10100",
+        "description": "List of Software Projects",
+        "name": "Software"
+      }
+    },
+    "customfield_11000": null,
+    "customfield_11001": null,
+    "aggregatetimespent": null,
+    "customfield_11400": "2018-12-18T08:10:00.382-0800",
+    "customfield_11116": null,
+    "customfield_11117": null,
+    "customfield_11999": {
+      "version": 1,
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "https://docushare.tmt.org/docushare/dsweb/Get/Document-79767/TestReport_CSW_v1.0.0-RC4_20190828_final.txt",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://docushare.tmt.org/docushare/dsweb/Get/Document-79767/TestReport_CSW_v1.0.0-RC4_20190828_final.txt"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "customfield_10700": null,
+    "customfield_11998": {
+      "self": "https://tmt-project.atlassian.net/rest/api/3/customFieldOption/11274",
+      "value": "Pass",
+      "id": "11274"
+    },
+    "resolutiondate": null,
+    "customfield_11917": null,
+    "customfield_11916": null,
+    "workratio": -1,
+    "customfield_11919": null,
+    "watches": {
+      "self": "https://tmt-project.atlassian.net/rest/api/3/issue/DEOPSCSW-622/watchers",
+      "watchCount": 2,
+      "isWatching": true
+    },
+    "issuerestriction": {
+      "issuerestrictions": {},
+      "shouldDisplay": false
+    },
+    "created": "2018-11-21T00:42:14.518-0800",
+    "customfield_12044": null,
+    "customfield_11110": null,
+    "customfield_11111": null,
+    "customfield_11990": {
+      "version": 1,
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "REQ-2-CSW-5755"
+            }
+          ]
+        }
+      ]
+    },
+    "customfield_12045": null,
+    "customfield_11112": null,
+    "customfield_12048": {
+      "version": 1,
+      "type": "doc",
+      "content": [
+        {
+          "type": "table",
+          "attrs": {
+            "isNumberColumnEnabled": false,
+            "layout": "default"
+          },
+          "content": [
+            {
+              "type": "tableRow",
+              "content": [
+                {
+                  "type": "tableHeader",
+                  "attrs": {},
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "Release Version "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "tableHeader",
+                  "attrs": {},
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "Link to Test Report "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "tableHeader",
+                  "attrs": {},
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "Pass / Fail "
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "tableRow",
+              "content": [
+                {
+                  "type": "tableCell",
+                  "attrs": {},
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": []
+                    }
+                  ]
+                },
+                {
+                  "type": "tableCell",
+                  "attrs": {},
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": []
+                    }
+                  ]
+                },
+                {
+                  "type": "tableCell",
+                  "attrs": {},
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "customfield_11113": null,
+    "customfield_11995": null,
+    "customfield_11114": null,
+    "customfield_11115": null,
+    "customfield_11994": null,
+    "customfield_11105": null,
+    "customfield_11106": null,
+    "customfield_11900": null,
+    "customfield_11107": null,
+    "customfield_11108": null,
+    "customfield_11109": null,
+    "customfield_11902": null,
+    "customfield_11901": null,
+    "updated": "2020-12-16T16:54:22.338-0800",
+    "timeoriginalestimate": null,
+    "description": {
+      "version": 1,
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "As a",
+              "marks": [
+                {
+                  "type": "strong"
+                }
+              ]
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "text",
+              "text": "component developer\t"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "text",
+              "text": "I want to",
+              "marks": [
+                {
+                  "type": "strong"
+                }
+              ]
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "text",
+              "text": "have a method to send a table update sql string to a database"
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "text",
+              "text": "so that",
+              "marks": [
+                {
+                  "type": "strong"
+                }
+              ]
+            },
+            {
+              "type": "hardBreak"
+            },
+            {
+              "type": "text",
+              "text": "I can modify a table"
+            }
+          ]
+        }
+      ]
+    },
+    "customfield_12032": {
+      "version": 1,
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "As a/an component developer, I want to have a method to send a table update sql string to a database so that I can modify a table"
+            }
+          ]
+        }
+      ]
+    },
+    "customfield_12035": null,
+    "customfield_11100": null,
+    "customfield_10012": "1|hzyxzz:",
+    "customfield_11101": null,
+    "customfield_11102": null,
+    "customfield_11103": null,
+    "timetracking": {},
+    "customfield_11104": null,
+    "customfield_10005": 1.0,
+    "customfield_10006": null,
+    "security": null,
+    "customfield_10007": [
+      {
+        "id": 193,
+        "name": "Sprint-45 2018-11-30",
+        "state": "closed",
+        "boardId": 3,
+        "goal": "",
+        "startDate": "2018-11-19T04:31:49.383Z",
+        "endDate": "2018-12-01T05:07:00.000Z",
+        "completeDate": "2018-12-03T03:16:20.067Z"
+      },
+      {
+        "id": 195,
+        "name": "Sprint-46 2018-12-14",
+        "state": "closed",
+        "boardId": 3,
+        "goal": "",
+        "startDate": "2018-12-04T03:16:00.000Z",
+        "endDate": "2018-12-15T03:52:00.000Z",
+        "completeDate": "2018-12-17T03:46:09.390Z"
+      },
+      {
+        "id": 196,
+        "name": "Sprint-47 2018-12-28",
+        "state": "closed",
+        "boardId": 3,
+        "goal": "",
+        "startDate": "2018-12-18T04:02:00.000Z",
+        "endDate": "2018-12-29T04:38:00.000Z",
+        "completeDate": "2018-12-31T03:08:46.031Z"
+      }
+    ],
+    "customfield_10800": null,
+    "customfield_11976": null,
+    "customfield_10008": "DEOPSCSW-600",
+    "customfield_10801": [],
+    "attachment": [],
+    "customfield_10802": null,
+    "customfield_10803": null,
+    "customfield_10804": null,
+    "summary": "Modify a table using update sql string",
+    "customfield_10000": "2018-12-18T08:10:00.382-0800",
+    "customfield_12026": null,
+    "customfield_10001": null,
+    "customfield_12025": null,
+    "customfield_10003": null,
+    "customfield_10004": null,
+    "customfield_10400": null,
+    "customfield_11964": null,
+    "customfield_12019": {
+      "self": "https://tmt-project.atlassian.net/rest/api/3/customFieldOption/11449",
+      "value": "--",
+      "id": "11449"
+    },
+    "customfield_11963": null,
+    "customfield_12018": {
+      "self": "https://tmt-project.atlassian.net/rest/api/3/customFieldOption/11440",
+      "value": "M",
+      "id": "11440"
+    },
+    "customfield_11966": null,
+    "environment": null,
+    "customfield_11965": null,
+    "customfield_11967": null,
+    "duedate": null,
+    "comment": {
+      "comments": [
+        {
+          "self": "https://tmt-project.atlassian.net/rest/api/3/issue/52536/comment/50716",
+          "id": "50716",
+          "author": {
+            "self": "https://tmt-project.atlassian.net/rest/api/3/user?accountId=557058%3A9d3917cb-05b4-484c-a516-9ad50aff5e99",
+            "accountId": "557058:9d3917cb-05b4-484c-a516-9ad50aff5e99",
+            "emailAddress": "jweiss@tmt.org",
+            "avatarUrls": {
+              "48x48": "https://secure.gravatar.com/avatar/c0ca9afd4a50cecf93d4103b01ce4a2d?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FJW-3.png",
+              "24x24": "https://secure.gravatar.com/avatar/c0ca9afd4a50cecf93d4103b01ce4a2d?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FJW-3.png",
+              "16x16": "https://secure.gravatar.com/avatar/c0ca9afd4a50cecf93d4103b01ce4a2d?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FJW-3.png",
+              "32x32": "https://secure.gravatar.com/avatar/c0ca9afd4a50cecf93d4103b01ce4a2d?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FJW-3.png"
+            },
+            "displayName": "Jason Weiss",
+            "active": true,
+            "timeZone": "America/Los_Angeles",
+            "accountType": "atlassian"
+          },
+          "body": {
+            "version": 1,
+            "type": "doc",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Reviewed with TW, marking as done."
+                  }
+                ]
+              }
+            ]
+          },
+          "updateAuthor": {
+            "self": "https://tmt-project.atlassian.net/rest/api/3/user?accountId=557058%3A9d3917cb-05b4-484c-a516-9ad50aff5e99",
+            "accountId": "557058:9d3917cb-05b4-484c-a516-9ad50aff5e99",
+            "emailAddress": "jweiss@tmt.org",
+            "avatarUrls": {
+              "48x48": "https://secure.gravatar.com/avatar/c0ca9afd4a50cecf93d4103b01ce4a2d?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FJW-3.png",
+              "24x24": "https://secure.gravatar.com/avatar/c0ca9afd4a50cecf93d4103b01ce4a2d?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FJW-3.png",
+              "16x16": "https://secure.gravatar.com/avatar/c0ca9afd4a50cecf93d4103b01ce4a2d?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FJW-3.png",
+              "32x32": "https://secure.gravatar.com/avatar/c0ca9afd4a50cecf93d4103b01ce4a2d?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FJW-3.png"
+            },
+            "displayName": "Jason Weiss",
+            "active": true,
+            "timeZone": "America/Los_Angeles",
+            "accountType": "atlassian"
+          },
+          "created": "2018-12-18T08:10:00.382-0800",
+          "updated": "2018-12-18T08:10:00.382-0800",
+          "jsdPublic": true
+        }
+      ],
+      "maxResults": 1,
+      "total": 1,
+      "startAt": 0
+    }
+  }
+}
