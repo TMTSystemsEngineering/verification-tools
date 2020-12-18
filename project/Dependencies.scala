@@ -8,4 +8,16 @@ object Dependencies {
     Libs.scalatest               % Test,
     Akka.`akka-stream-testkit`   % Test
   )
+
+  val `jira-updater` = Seq(
+    Akka.`akka-actor-typed`,
+    Akka.`akka-stream-typed`,
+    AkkaHttp.`akka-http`,
+    AkkaHttp.`spray-json`,
+    Libs.`mockito-scala`         % Test,
+    Libs.scalatest               % Test,
+    Akka.`akka-stream-testkit`   % Test,
+    AkkaHttp.`akka-http-testkit` % Test
+  )
+
 }

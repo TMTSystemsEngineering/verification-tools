@@ -13,3 +13,9 @@ lazy val `vam-tool` = project
   .settings(
     libraryDependencies ++= Dependencies.`vam-tool`
   )
+
+lazy val `jira-updater` = project
+  .in(file("jira-updater"))
+  .settings(
+    libraryDependencies ++= Dependencies.`jira-updater`
+  )
