@@ -12,7 +12,7 @@ class JiraUpdaterTest extends AnyWordSpec with Matchers {
   private val user = sys.env.getOrElse("JIRAUSER", "")
   private val pw = sys.env.getOrElse("JIRATOKEN", "")
   private val link = "https://tmt-project.atlassian.net/wiki/spaces/DEOPSCSW/pages/1230340111/RTM-report+v3.0.0"
-  val testReport = new File("jira-updater/src/test/resources/testRequirementsMapping_v3.0.0-RC4.txt")
+  val testReport = new File("jira-updater/src/test/resources/testRequirementsMapping-v3.0.0.txt")
   val jiraUpdater = new JiraUpdater(user, pw, "DEOPSCSW", link, testReport)
   "Jira updater" should {
     "update va info in jira" in {
