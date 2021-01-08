@@ -9,7 +9,12 @@ case object JiraInfo {
     val REGRESSION_TESTING_HISTORY: String = "customfield_12048"
     val VA_PROCEDURE_REPORT: String = "customfield_11999"
     val VA_APPROVAL: String = "customfield_11998"
+    val ISSUE_LINKS: String = "issuelinks"
   }
+  case object IssueLinkTypes {
+    val VERIFIES = "10400"
+  }
+
 
   case class Update(field: Field)
   case class Field(name: String, data: List[FieldData])
@@ -33,7 +38,7 @@ case object JiraInfo {
   }
 
 
-  // the classes below are for Regression Testing History, but don't proper JSON encoding yet, so would
+  // the classes below are for Regression Testing History, but don't have proper JSON encoding yet, so would
   // need some work.
   case class Attr[T](name: String, value:T)
   class Content(val attrs: Option[List[Attr[_]]], val content: Option[List[Content]])
@@ -44,6 +49,7 @@ case object JiraInfo {
   case class tableCell(override val attrs: Option[List[Attr[_]]], override val content: Option[List[Content]]) extends Content(attrs, content)
   case class paragraph(override val content: Option[List[Content]]) extends Content(None, content)
   case class text(text: String) extends Content(None, None)
+  // end Regression classes
 
   case class VaApprovalAllowedValue(self: String, value: String, id: String)
   case object VaApprovalValues {

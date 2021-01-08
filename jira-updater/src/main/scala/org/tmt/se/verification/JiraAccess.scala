@@ -7,7 +7,7 @@ import akka.http.scaladsl.model.{HttpMethods, HttpRequest, Uri, _}
 import akka.stream.scaladsl.Sink
 import akka.util.ByteString
 import org.tmt.se.verification.JiraInfo._
-import spray.json.{JsValue, JsonParser, enrichAny}
+import spray.json.{JsArray, JsObject, JsValue, JsonParser, enrichAny}
 
 import scala.concurrent.duration.DurationInt
 import scala.concurrent.{Await, ExecutionContextExecutor}
@@ -21,6 +21,10 @@ object JiraAccess {
   implicit val system: ActorSystem = ActorSystem()
   implicit val ec: ExecutionContextExecutor = system.dispatcher
 
+  implicit class StringHelpers(s: String) {
+    def stripStartAndEndQuotes(): String = s.replaceAll("^\"|\"$", "")
+  }
+
   private def extractResponse(response: HttpResponse) =
     response.
       entity.
@@ -28,7 +32,8 @@ object JiraAccess {
       .runWith(Sink.fold(ByteString.empty)(_ ++ _))
       .map(_.utf8String)
 
-  def get(uri: Uri, user: String = defaultUser, pw: String = defaultToken): String = {
+  // todo return either
+  def get(uri: Uri, user: String = defaultUser, pw: String = defaultToken): Option[String] = {
     val authHeader = headers.Authorization(BasicHttpCredentials(user, pw))
     val request  = HttpRequest(HttpMethods.GET, uri, headers=List(authHeader))
     val response = Await.result(Http(system).singleRequest(request), 20.seconds)
@@ -36,9 +41,9 @@ object JiraAccess {
     if (response.status.isFailure()) {
       println(s"Error with JIRA request: URI = $uri")
       println(response.status.defaultMessage())
-      ""
+      None
     } else {
-      Await.result(extractResponse(response), 5.seconds)
+      Some(Await.result(extractResponse(response), 5.seconds))
     }
   }
 
@@ -62,15 +67,32 @@ object JiraAccess {
     }
   }
 
-  def getIssueField(storyId: String, fieldId: String, user: String = defaultUser, pw: String = defaultToken): JsValue = {
+  def getIssueField(storyId: String, fieldId: String, user: String = defaultUser, pw: String = defaultToken): Option[JsValue] = {
     val uri = s"$rootUrl/issue/$storyId"
-    val fullIssueJson = get(uri, user, pw)
-    JsonParser(fullIssueJson)
-      .asJsObject()
-      .fields("fields")
-      .asJsObject()
-      .fields(fieldId)
+    get(uri, user, pw).map(
+      JsonParser(_)
+        .asJsObject()
+        .fields("fields")
+        .asJsObject()
+        .fields(fieldId)
+    )
+  }
 
+  def getIssueVerifiesLinks(storyId: String, user: String = defaultUser, pw: String = defaultToken): Option[List[String]] = {
+    def isIssueLinkAVerifies(o: JsObject) = o.fields("type").asJsObject().fields("id").toString().stripStartAndEndQuotes() == JiraInfo.IssueLinkTypes.VERIFIES
+    getIssueField(storyId, JiraInfo.FieldIds.ISSUE_LINKS, user, pw).map(
+      _.asInstanceOf[JsArray]
+          .elements
+          .map(_.asJsObject())
+          .collect {
+            case v if isIssueLinkAVerifies(v) =>
+              v.fields("outwardIssue")
+                .asJsObject()
+                .fields("key")
+                .toString()
+                .stripStartAndEndQuotes()
+          }.toList
+    )
   }
 
   def updateIssueField(storyId: String, fieldId: String, newValue: String, user: String = defaultUser, pw: String = defaultToken): String = {

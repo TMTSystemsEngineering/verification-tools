@@ -17,11 +17,19 @@ class JiraAccessTest extends AnyWordSpec with Matchers {
         "{\"issueLinkTypes\":[{\"id\":\"10000\",\"name\":\"Blocks\",\"inward\":\"is blocked by\",\"outward\":\"blocks\",\"self\":\"https://tmt-project.atlassian.net/rest/api/3/issueLinkType/10000\"},{\"id\":\"10001\",\"name\":\"Cloners\",\"inward\":\"is cloned by\",\"outward\":\"clones\",\"self\":\"https://tmt-project.atlassian.net/rest/api/3/issueLinkType/10001\"},{\"id\":\"10002\",\"name\":\"Duplicate\",\"inward\":\"is duplicated by\",\"outward\":\"duplicates\",\"self\":\"https://tmt-project.atlassian.net/rest/api/3/issueLinkType/10002\"},{\"id\":\"10401\",\"name\":\"Gantt End to End\",\"inward\":\"has to be finished together with\",\"outward\":\"has to be finished together with\",\"self\":\"https://tmt-project.atlassian.net/rest/api/3/issueLinkType/10401\"},{\"id\":\"10402\",\"name\":\"Gantt End to Start\",\"inward\":\"has to be done after\",\"outward\":\"has to be done before\",\"self\":\"https://tmt-project.atlassian.net/rest/api/3/issueLinkType/10402\"},{\"id\":\"10403\",\"name\":\"Gantt Start to End\",\"inward\":\"start is earliest end of\",\"outward\":\"earliest end is start of\",\"self\":\"https://tmt-project.atlassian.net/rest/api/3/issueLinkType/10403\"},{\"id\":\"10404\",\"name\":\"Gantt Start to Start\",\"inward\":\"has to be started together with\",\"outward\":\"has to be started together with\",\"self\":\"https://tmt-project.atlassian.net/rest/api/3/issueLinkType/10404\"},{\"id\":\"10300\",\"name\":\"Problem/Incident\",\"inward\":\"is caused by\",\"outward\":\"causes\",\"self\":\"https://tmt-project.atlassian.net/rest/api/3/issueLinkType/10300\"},{\"id\":\"10003\",\"name\":\"Relates\",\"inward\":\"relates to\",\"outward\":\"relates to\",\"self\":\"https://tmt-project.atlassian.net/rest/api/3/issueLinkType/10003\"},{\"id\":\"10400\",\"name\":\"Verify\",\"inward\":\"is verified by\",\"outward\":\"verifies\",\"self\":\"https://tmt-project.atlassian.net/rest/api/3/issueLinkType/10400\"}]}"
 
       val uri = "https://tmt-project.atlassian.net/rest/api/3/issueLinkType"
-      JiraAccess.get(uri, user, pw) shouldBe expectedOutput
+      JiraAccess.get(uri, user, pw).get shouldBe expectedOutput
     }
     "get issue field should return just the field" in {
       val expectedJson = "{\"content\":[{\"attrs\":{\"isNumberColumnEnabled\":false,\"layout\":\"default\"},\"content\":[{\"content\":[{\"attrs\":{},\"content\":[{\"content\":[{\"text\":\"Release Version \",\"type\":\"text\"}],\"type\":\"paragraph\"}],\"type\":\"tableHeader\"},{\"attrs\":{},\"content\":[{\"content\":[{\"text\":\"Link to Test Report \",\"type\":\"text\"}],\"type\":\"paragraph\"}],\"type\":\"tableHeader\"},{\"attrs\":{},\"content\":[{\"content\":[{\"text\":\"Pass / Fail \",\"type\":\"text\"}],\"type\":\"paragraph\"}],\"type\":\"tableHeader\"}],\"type\":\"tableRow\"},{\"content\":[{\"attrs\":{},\"content\":[{\"content\":[],\"type\":\"paragraph\"}],\"type\":\"tableCell\"},{\"attrs\":{},\"content\":[{\"content\":[],\"type\":\"paragraph\"}],\"type\":\"tableCell\"},{\"attrs\":{},\"content\":[{\"content\":[],\"type\":\"paragraph\"}],\"type\":\"tableCell\"}],\"type\":\"tableRow\"}],\"type\":\"table\"}],\"type\":\"doc\",\"version\":1}"
-      JiraAccess.getIssueField("DEOPSCSW-622", JiraInfo.FieldIds.REGRESSION_TESTING_HISTORY, user, pw).toString() shouldBe expectedJson
+      JiraAccess.getIssueField("DEOPSCSW-622", JiraInfo.FieldIds.REGRESSION_TESTING_HISTORY, user, pw).toString shouldBe expectedJson
+
+    }
+    "get issue links should return list of JIRA issue names" in {
+      val expected = List("VER-808", "VER-809")
+      JiraAccess.getIssueVerifiesLinks("DEOPSCSW-328", user, pw) shouldBe expected
+    }
+    "get issue links should return list of JIRA issue names2" in {
+      println(JiraAccess.getIssueVerifiesLinks("DEOPSCSW-122", user, pw))
     }
     "update VA ID" in {
       // this actually updates a field, and probably shouldn't be used unless you know what you are doing.
